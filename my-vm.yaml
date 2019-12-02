@@ -10,3 +10,5 @@ spec:
   diskSize: 3GB
   memory: 800MB
   ssh: true
+status:
+  state: Created
