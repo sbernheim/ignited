@@ -1,0 +1,37 @@
+apiVersion: ignite.weave.works/v1alpha2
+kind: VM
+metadata:
+  name: ng
+  labels:
+    app: http
+spec:
+  cpus: 1
+  image:
+    oci: nginx:latest
+  kernel:
+    oci: weaveworks/ignite-kernel:4.19.47
+  diskSize: 1GB
+  memory: 100MB
+  network:
+    ports:
+    - hostPort: 80
+      vmPort: 80
+      protocol: tcp
+  #    bindAddress: 10.0.0.15
+  #storage:
+  #  volumeMounts:
+  #  - mountPath: /data
+  #    name: gogs0
+  #  volumes:
+  #  - blockDevice:
+  #      path: /dev/mmcblk0p2
+  #    name: gogs0
+  # Optional, an array of files/directories to copy into the VM on creation
+  # Default: unset, nothing will be copied
+  #copyFiles:
+  # This example copies a Kubernetes KubeConfig file from 
+  #    /etc/kubernetes/admin.conf
+  # on the host to /home/user/.kube/config inside the VM
+  #- hostPath: /etc/kubernetes/admin.conf
+  #  vmPath: /home/user/.kube/config
+  #ssh: true
