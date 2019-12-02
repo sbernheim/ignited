@@ -14,7 +14,7 @@ spec:
     oci: weaveworks/ignite-kernel:4.19.47
   memory: 512MB
   network: {}
-  ssh: {}
+  ssh: true
   storage: {}
 status:
   image:
