@@ -2,13 +2,13 @@ apiVersion: ignite.weave.works/v1alpha2
 kind: VM
 metadata:
   name: my-vm
-  uid: 'abcd123456789"
+  uid: "5121287c6564adee"
 spec:
   image:
-    oci: weaveworks/ignite-ubuntu
+    oci: weaveworks/ignite-ubuntu:latest
   cpus: 1
-  diskSize: 3GB
-  memory: 800MB
-  ssh: true
+  diskSize: 1GB
+  memory: 512MB
+  ssh: {}
 status:
   state: Created
