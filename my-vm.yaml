@@ -10,5 +10,3 @@ spec:
   diskSize: 1GB
   memory: 512MB
   ssh: {}
-status:
-  state: Created
